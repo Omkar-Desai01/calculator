@@ -1,9 +1,16 @@
 import "./MainDispaly.css";
 
-export default function MainDisplay() {
+const CalculatorTitle = (props) => {
   return (
-    <div className="main-display">
-      <div className="display-value">0</div>
-    </div>
+    <>
+      {props.question && (
+        <div className="question-title">
+          <h1>{props.question}</h1>
+        </div>
+      )}
+      {props.answer && <div className="display-value">{props.answer}</div>}
+    </>
   );
-}
+};
+
+export default CalculatorTitle;
